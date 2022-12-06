@@ -143,3 +143,26 @@ function scrollTop() {
     else scrollTop.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollTop)
+
+/*=============== GET VERSION ===============*/
+function getVersion() {
+    var version = "2022.9.2";
+    var copyright = " | Copyright &#169; 2022 Lucas Urbain | All Rigths Reserved.";
+    var copyrightDE = " | Copyright &#169; 2022 Lucas Urbain | Alle Rights Vorbehalten.";
+    var copyrightFR = " | Copyright &#169; 2022 Lucas Urbain | Tous Droits Réservés.";
+
+    var language = document.getElementsByClassName("footer__copy");
+
+    console.log(language[0].lang)
+
+    if(language[0].lang == "de") {
+        document.getElementById('versionID').innerHTML = version + copyrightDE;
+    }else if(language[0].lang == "fr") {
+        document.getElementById('versionID').innerHTML = version + copyrightFR;
+    }else{
+       document.getElementById('versionID').innerHTML = version + copyright;
+    }   
+}
+
+//affiche le resultat
+window.onload = getVersion();
