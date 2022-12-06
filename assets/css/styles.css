@@ -25,6 +25,7 @@
         --text-color-light: #707070;
         --body-color: #FFF;
         --container-color: #FFF;
+        --container-color-alt: #F0EFEF;
         /*========== Font and typography ==========*/
         /*.5rem = 8px | 1rem = 16px ...*/
         --body-font: 'Poppins', sans-serif;
@@ -434,6 +435,33 @@
         display: block;
         transition: .3s;
     }
+
+    /* Scroll top */
+    .scrolltop {
+        position: fixed;
+        right: 1rem;
+        bottom: -20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: .3rem;
+        background-color: var(--container-color-alt);
+        border-radius: .4rem;
+        z-index: var(--z-tooltip);
+        transition: .4s;
+        visibility: hidden;
+    }
+
+    .scrolltop__icon {
+        font-size: 1.2rem;
+        color: var(--text-color);
+    }
+
+    .show-scroll {
+        visibility: visible;
+        bottom: 5rem;
+    }
+
     /*=============== HOME ===============*/
     
     .home__container {
@@ -1318,9 +1346,13 @@
             margin-left: auto;
             margin-right: auto;
         }
-        .l-header,
-        .scrolltop {
+        .l-header {
             display: none;
+        }
+
+        /* Scroll top */
+        .scrolltop {
+            right: 5rem;
         }
     }
     
