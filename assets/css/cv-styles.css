@@ -116,7 +116,7 @@ body.scale-cv {
 }
 
 .scale-cv .section {
-    padding: 1.43rem 0 .80rem;
+    padding: 1.27rem 0 .80rem;
 }
 
 .scale-cv .section-title {
@@ -129,8 +129,8 @@ body.scale-cv {
 }
 
 .scale-cv .home__img {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
 }
 
 .scale-cv .home__container {
