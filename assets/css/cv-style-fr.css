@@ -116,11 +116,12 @@ body.scale-cv {
 }
 
 .scale-cv .section {
-    padding: 1.5rem 0 .80rem;
+    padding: 0.86rem 0;
 }
 
 .scale-cv .section-title {
-    margin-bottom: .75rem;
+    margin-bottom: .5rem;
+
 }
 
 .scale-cv .resume__left,
@@ -129,8 +130,8 @@ body.scale-cv {
 }
 
 .scale-cv .home__img {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
 }
 
 .scale-cv .home__container {
@@ -245,6 +246,12 @@ img {
     margin-bottom: var(--mb-3);
 }
 
+.section .description {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    padding-bottom: 2rem;
+}
 
 /*========== LAYOUT ==========*/
 
@@ -442,9 +449,12 @@ img {
 
 .profile__description {
     text-align: center;
-    margin-bottom: var(--mb-1);
+    margin-bottom: var(--mb-3);
 }
 
+.skills__description {
+    margin-bottom: var(--mb-1);
+}
 
 /*========== EDUCATION AND EXPERIENCE ==========*/
 
@@ -671,5 +681,10 @@ img {
     .interests__container {
         grid-template-columns: repeat(4, max-content);
         column-gap: 3.5rem;
+    }
+    .section .description {
+        opacity: 1;
+        visibility: visible;
+        height: auto;
     }
 }
