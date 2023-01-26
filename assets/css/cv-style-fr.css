@@ -130,8 +130,8 @@ body.scale-cv {
 }
 
 .scale-cv .home__img {
-    width: 100px;
-    height: 100px;
+    width: 160px;
+    height: 160px;
 }
 
 .scale-cv .home__container {
@@ -145,6 +145,10 @@ body.scale-cv {
 .scale-cv .home__adress,
 .scale-cv .social__container {
     gap: .75rem;
+}
+
+.scale-cv .social__container {
+    padding-bottom: 0.5rem;
 }
 
 .scale-cv .home__icon,
@@ -234,6 +238,10 @@ img {
 
 .section {
     padding: 1.5rem 0;
+}
+
+.introduction {
+    padding: 1.9rem 0;
 }
 
 .section-title {
@@ -372,15 +380,15 @@ img {
 }
 
 .home__img {
-    width: 120px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     justify-self: center;
     margin-bottom: var(--mb-1);
 }
 
 .home__title {
-    font-size: var(--h1-font-size);
+    font-size: 1.7rem;
 }
 
 .home__profession {
