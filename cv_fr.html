@@ -83,7 +83,7 @@
                             <h3 class="home__profession">Développeur Web</h3>
 
                             <div>
-                                <a download="" href="assets/pdf/CV_URBAIN_LUCAS_FR.pdf" class="home__button-movil">Download</a>
+                                <a download="" href="assets/pdf/CV_URBAIN_LUCAS_FR.pdf" class="home__button-movil">Télécharger mon CV</a>
                             </div>
                         </div>
 
@@ -122,7 +122,7 @@
                         <b> • Flexibilité :</b> Je suis quelqu'un qui s'adapate rapidement et facilement à un nouvel environnement.
                     </p>
                     <p class="skills__description">
-                        <b> • Plannification :</b> J'ai une grande discipline qui me permet d'anticiper à l'avance les différents retards.
+                        <b> • Plannification :</b> Étant très discipiliné, je m'organise et anticipe les choses en toute autonomie.
                     </p>
                 </section>
 
@@ -351,6 +351,25 @@
                  
             </div>
         </div>
+
+        <div class="qr-code-viewver" >
+            <div class="content__card">
+
+                <div class="title__container">
+                    <h1>En cours de téléchargement</h1>
+                </div>
+
+                <div class="container">
+                    <div class="check-mark">
+                        <img src="assets/img/check-mark.png" alt="qr-code" class="">
+                    </div>
+                </div>  
+
+    
+            </div>
+           
+      
+            </div>
     </main>
 
     <!--========== SCROLL TOP ==========-->
@@ -363,6 +382,28 @@
 
     <!--========== MAIN JS ==========-->
     <script src="assets/js/cv-main.js"></script>
+
+    <script>
+
+        let download = document.getElementById("resume-button");
+        let viewver = document.querySelector('.qr-code-viewver');  
+
+        download.addEventListener("click", function() {
+            displayInterface();
+            setTimeout(() => {
+                removeInterface();
+            }, "4500");
+        });
+
+        function displayInterface(){
+            viewver.classList.toggle("active-modal")
+        }
+
+        function removeInterface(){
+            viewver.classList.remove("active-modal")
+        }
+
+    </script>
 </body>
 
 </html>
