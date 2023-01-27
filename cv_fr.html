@@ -122,7 +122,7 @@
                         <b> • Flexibilité :</b> Je suis quelqu'un qui s'adapate rapidement et facilement à un nouvel environnement.
                     </p>
                     <p class="skills__description">
-                        <b> • Plannification :</b> Étant très discipiliné, je m'organise et anticipe les choses en toute autonomie.
+                        <b> • Planification :</b> Étant très discipiliné, je m'organise et anticipe les choses en toute autonomie.
                     </p>
                 </section>
 
@@ -356,12 +356,18 @@
             <div class="content__card">
 
                 <div class="title__container">
-                    <h1>En cours de téléchargement</h1>
+                    <h1>Télechargement en cours...</h1>
                 </div>
 
                 <div class="container">
                     <div class="check-mark">
-                        <img src="assets/img/check-mark.png" alt="qr-code" class="">
+                        <div class="content">
+                            <input type="checkbox" id="check">
+                            <label for="check" id="label-check">
+                               <div class="check-icon" ></div>
+                            </label>
+                        </div>
+               
                     </div>
                 </div>  
 
@@ -387,20 +393,34 @@
 
         let download = document.getElementById("resume-button");
         let viewver = document.querySelector('.qr-code-viewver');  
+        let checklabel = document.getElementById("label-check"); 
+        let checkInput = document.getElementById("check"); 
 
         download.addEventListener("click", function() {
             displayInterface();
             setTimeout(() => {
-                removeInterface();
-            }, "4500");
+                checkValidate();
+            }, "2500");
         });
 
         function displayInterface(){
-            viewver.classList.toggle("active-modal")
+            viewver.classList.toggle("active-modal");
         }
 
         function removeInterface(){
-            viewver.classList.remove("active-modal")
+            viewver.classList.remove("active-modal");
+        }
+
+        function checkValidate() {
+            viewver.classList.toggle("download-completed");
+            checkInput.setAttribute("checked", "");
+            checkInput.setAttribute("disabled", "disabled");
+            setTimeout(() => {
+                removeInterface();
+                viewver.classList.remove("download-completed");
+                checkInput.removeAttribute("checked");
+                checkInput.removeAttribute("disabled");
+            }, "2000");
         }
 
     </script>

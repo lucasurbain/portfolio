@@ -290,6 +290,77 @@ img {
     visibility: visible;
 }
 
+label{
+    position: relative;
+    height: 125px;
+    width: 125px;
+    display: inline-block;
+    border: 5px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    border-left-color: #BFBFBF;
+    animation: rotate 1.5s linear infinite;
+    
+  }
+  @keyframes rotate {
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+
+  .download-completed .check-icon{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 28px;
+    transform: scaleX(-1) rotate(135deg);
+    height: 56px;
+    width: 28px;
+    border-top: 7px solid #5cb85c;
+    border-right: 7px solid #5cb85c;
+    transform-origin: left top;
+    animation: check-icon 0.5s ease;
+  }
+  @keyframes check-icon {
+    0%{
+      height: 0;
+      width: 0;
+      opacity: 1;
+    }
+    20%{
+      height: 0;
+      width: 28px;
+      opacity: 1;
+    }
+    40%{
+      height: 56px;
+      width: 28px;
+      opacity: 1;
+    }
+    100%{
+      height: 56px;
+      width: 28px;
+      opacity: 1;
+    }
+  }
+  input{
+    display: none; 
+  }
+  input:checked ~ label.check-icon{
+    display: block;
+    animation: none;
+  }
+  input:checked ~ label{
+    animation: none;
+    border-color: #5cb85c;
+  
+  }
+
+  .download-completed {
+    animation: none;
+    border-color: #5cb85c;
+
+  }
+
 .title__container {
     padding: 50px 0px 0px 0px;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
@@ -309,14 +380,14 @@ img {
     background-color: #F4F4F4;
 }
 
-.check-mark img {
+.check-mark .content {
     background-color: #F4F4F4;
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding: 5px;
-    height: 100px; 
-    width: 100px; 
+    height: 150px; 
+    width: 150px; 
     margin-top: 100px;
 }
 
