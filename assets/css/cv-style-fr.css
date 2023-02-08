@@ -391,6 +391,14 @@ label{
     margin-top: 100px;
 }
 
+/*========== BUTTON NAV ==========*/
+
+.button__nav {
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    position: relative;
+}
 
 /*========== LAYOUT ==========*/
 
@@ -826,4 +834,64 @@ label{
         visibility: visible;
         height: auto;
     }
+
+    .button__nav {
+        opacity: 1;
+        visibility: visible;
+        width: 120px;
+        height: 120px;
+        border-radius: 20px;
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, .1);
+        text-align: center;
+    }
+
+    .button__nav:hover {
+        cursor: pointer;
+        background-color: #F0EFEF;
+    }
+
+    .button__nav .icon {
+        font-size: 32px;
+        color: #001F27;
+        margin-top: 30px;
+    }
+
+    .button__nav .text {
+        font-size: 14px;
+        color: #181616;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .button__nav {
+        opacity: 1;
+        visibility: visible;
+        position: fixed;
+        left: 3%;
+        top: 48%;
+        background-color: #F4F4F4;
+        width: 120px;
+        height: 120px;
+        border-radius: 20px;
+        padding: 10px;
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, .1);
+        text-align: center;
+    }
+
+    .button__nav:hover {
+        cursor: pointer;
+        background-color: #F0EFEF;
+    }
+
+    .button__nav .icon {
+        font-size: 32px;
+        color: #001F27;
+        margin-top: 0px;
+    }
+
+    .button__nav .text {
+        font-size: 14px;
+        color: #181616;
+    }
+    
 }

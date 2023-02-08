@@ -558,11 +558,19 @@
         row-gap: 2.25rem;
         justify-items: center;
     }
+
+    .scroll-fr{
+        row-gap: 3.50rem;
+    }
+
+    .scroll-de{
+        row-gap: 4rem;
+    }
     
     .home__scroll-icon {
         font-size: 1.25rem;
     }
-    
+
     .home__scroll-name {
         font-size: var(--smaller-font-size);
         transform: rotate(-90deg);
