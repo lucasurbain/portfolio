@@ -398,6 +398,7 @@ label{
     visibility: hidden;
     transition: .3s;
     position: relative;
+    display: none;
 }
 
 /*========== LAYOUT ==========*/
@@ -524,6 +525,7 @@ label{
     border-radius: 50%;
     justify-self: center;
     margin-bottom: var(--mb-1);
+    margin-top: 50px;
 }
 
 .home__title {
@@ -843,6 +845,7 @@ label{
         border-radius: 20px;
         box-shadow: 0 -1px 4px rgba(0, 0, 0, .1);
         text-align: center;
+        display: block;
     }
 
     .button__nav:hover {
@@ -860,12 +863,16 @@ label{
         font-size: 14px;
         color: #181616;
     }
+    .home__img {
+        margin-top: 0;
+    }
 }
 
 @media screen and (min-width: 1500px) {
     .button__nav {
         opacity: 1;
         visibility: visible;
+        display: block;
         position: fixed;
         left: 3%;
         top: 48%;
