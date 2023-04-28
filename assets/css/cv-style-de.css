@@ -828,7 +828,7 @@ label{
         column-gap: 3.5rem;
     }
     .interests__container {
-        grid-template-columns: repeat(4, max-content);
+        grid-template-columns: repeat(6, max-content);
         column-gap: 3.5rem;
     }
     .section .description {

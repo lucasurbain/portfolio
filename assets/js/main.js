@@ -146,7 +146,7 @@ window.addEventListener('scroll', scrollTop)
 
 /*=============== GET VERSION ===============*/
 function getVersion() {
-    var version = "2023.16.2";
+    var version = "2023.17.1";
     var copyright = " | Copyright &#169; 2023 Lucas Urbain | All Rigths Reserved.";
     var copyrightDE = " | Copyright &#169; 2023 Lucas Urbain | Alle Rights Vorbehalten.";
     var copyrightFR = " | Copyright &#169; 2023 Lucas Urbain | Tous Droits Réservés.";
@@ -156,13 +156,22 @@ function getVersion() {
     console.log(language[0].lang)
 
     if(language[0].lang == "de") {
-        document.getElementById('versionID').innerHTML = version + copyrightDE;
+        document.getElementById('versionID').innerHTML = "<bdi id='modalAction'>" +version +"</bdi>" + copyrightDE;
     }else if(language[0].lang == "fr") {
-        document.getElementById('versionID').innerHTML = version + copyrightFR;
+        document.getElementById('versionID').innerHTML = "<bdi id='modalAction'>" +version +"</bdi>" + copyrightFR;
     }else{
-       document.getElementById('versionID').innerHTML = version + copyright;
+       document.getElementById('versionID').innerHTML = "<bdi id='modalAction'>" +version +"</bdi>" + copyright;
     }   
 }
 
 //affiche le resultat
 window.onload = getVersion();
+
+/*==================== SHOW MODAL VERSION ====================*/
+let actionModalChangeLog = document.getElementById('modalAction');
+
+let updateModal = document.querySelector('.changelog_modal');
+
+actionModalChangeLog.addEventListener('click', () => {
+    updateModal.classList.toggle('active-modal')
+})

@@ -788,6 +788,12 @@
         font-size: var(--small-font-size);
         margin-bottom: 2rem;
     }
+
+    .services__modal-subtitle {
+        font-size: var(--normal-font-size);
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
     
     .services__modal-list {
         display: grid;
@@ -1124,6 +1130,14 @@
         color: var(--container-color);
         text-align: center;
         font-size: var(--small-font-size);
+    }
+
+    .left {
+        text-align: left;
+    }
+
+    #modalAction:hover {
+        cursor: pointer;
     }
     /*=============== SCROLL BAR ===============*/
     

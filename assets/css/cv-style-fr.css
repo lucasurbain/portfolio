@@ -116,7 +116,7 @@ body.scale-cv {
 }
 
 .scale-cv .section {
-    padding: 0.86rem 0;
+    padding: 0.75rem 0;
 }
 
 .scale-cv .section-title {
@@ -598,7 +598,7 @@ label{
 
 .profile__description {
     text-align: center;
-    margin-bottom: var(--mb-3);
+    margin-bottom: var(--mb-1);
 }
 
 .skills__description {
@@ -828,7 +828,7 @@ label{
         column-gap: 3.5rem;
     }
     .interests__container {
-        grid-template-columns: repeat(4, max-content);
+        grid-template-columns: repeat(6, max-content);
         column-gap: 3.5rem;
     }
     .section .description {
