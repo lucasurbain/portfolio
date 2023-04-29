@@ -1136,6 +1136,11 @@
         text-align: left;
     }
 
+    .biggerFont {
+        font-size: 26px;
+    }
+
+
     #modalAction:hover {
         cursor: pointer;
     }
