@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Master Plan v2</title>
+</head>
+<body>
+    <section class="coming-soon">
+        <div class="global__data">
+            <h2>Just a question of time...</h2>
+            <div class="countdown">
+                <div class="container-year">
+                    <h3 class="year">xx</h3>
+                    <p>Year</p>
+                </div>
+                <div class="container-day">
+                    <h3 class="day">xx</h3>
+                    <p>Day</p>
+                </div>
+                <div class="container-hour">
+                    <h3 class="hour">xx</h3>
+                    <p>Hour</p>
+                </div>
+                <div class="container-minute">
+                    <h3 class="minute">xx</h3>
+                    <p>Minute</p>
+                </div>
+                <div class="container-second">
+                    <h3 class="second">xx</h3>
+                    <p>Second</p>
+                </div>
+            </div>
+        </div>
+        <img src="assets/img/calendar-img.svg" alt="" class="img__calendar">
+    </section>
+
+
+    <style>
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            padding: 4rem;
+        }
+
+        .coming-soon {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .year,
+        .day,
+        .hour,
+        .minute,
+        .second {
+            font-size: 2.5rem;
+            padding-bottom: .5rem;
+        }
+
+        .img__calendar {
+            height: 50vh;
+            padding-top: 5rem;
+        }
+
+        @media screen and (min-width: 992px) {
+            h2 {
+                font-size: 4rem;
+                padding: 3rem;
+            }
+
+            .img__calendar {
+                padding-top: 3rem;
+            }
+        }
+
+    </style>
+
+    <script>
+
+        const countdown = () => {
+            const countDate = new Date("September 1, 2025 00:00:00").getTime()
+            const now = new Date().getTime()
+            const gap = countDate - now
+
+            //Time parameters
+            const second = 1000
+            const minute = 60 * second
+            const hour = 60 * minute
+            const day = 24 * hour
+            const years = 365.25 * day
+
+            const textYear = Math.floor(gap / years)
+            const textDay = Math.floor((gap % years) / day)
+            const textHour = Math.floor((gap % day) / hour)
+            const textMinute = Math.floor((gap % hour) / minute)
+            const textSecond = Math.floor((gap % minute) / second)
+
+            document.querySelector(".year").innerHTML = textYear
+            document.querySelector(".day").innerHTML = textDay
+            document.querySelector(".hour").innerHTML = textHour
+            document.querySelector(".minute").innerHTML = textMinute
+            document.querySelector(".second").innerHTML = textSecond
+
+        }
+
+
+        countdown()
+
+        setInterval(countdown, 1000)
+
+    </script>
+</body>
+</html>
