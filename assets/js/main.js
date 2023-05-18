@@ -15,6 +15,22 @@ const showMenu = (headerToggle, navbarId) => {
 }
 showMenu('header-toggle', 'navbar')
 
+/*==================== LOAD MODAL ====================*/
+let getDataModal = document.querySelector('.content-modal');
+
+let updateModal = document.querySelector('.changelog_modal');
+
+fetch("modal.html")
+  .then(response => response.text())
+  .then(html => {
+    // Insère le contenu HTML dans l'élément
+    getDataModal.innerHTML = html;
+
+    // Affiche le contenu de getDataModal dans la console
+    console.log(getDataModal);
+
+  });
+
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 function scrollHeader() {
     const header = document.getElementById('header')
@@ -146,7 +162,7 @@ window.addEventListener('scroll', scrollTop)
 
 /*=============== GET VERSION ===============*/
 function getVersion() {
-    var version = "2023.18.1";
+    var version = "2023.19.1";
     var copyright = " | Copyright &#169; 2023 Lucas Urbain | All Rigths Reserved.";
     var copyrightDE = " | Copyright &#169; 2023 Lucas Urbain | Alle Rights Vorbehalten.";
     var copyrightFR = " | Copyright &#169; 2023 Lucas Urbain | Tous Droits Réservés.";
@@ -169,8 +185,6 @@ window.onload = getVersion();
 
 /*==================== SHOW MODAL VERSION ====================*/
 let actionModalChangeLog = document.getElementById('modalAction');
-
-let updateModal = document.querySelector('.changelog_modal');
 
 actionModalChangeLog.addEventListener('click', () => {
     updateModal.classList.toggle('active-modal');
