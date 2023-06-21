@@ -131,7 +131,7 @@
     .main {
         overflow: hidden;
     }
-    
+
     .section {
         padding: 4.5rem 0 1rem;
     }
@@ -1144,6 +1144,98 @@
     #modalAction:hover {
         cursor: pointer;
     }
+
+    /*=============== LINKS PAGE ===============*/
+    .header__info {
+        background-color: #F8F8F8;
+        padding: 5rem 1rem 5rem 1rem;
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, .1);
+    }
+
+    .outline-off {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        outline: 0;
+    }
+
+    .nav__item__link {
+        width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -5rem;
+    }
+
+    .content__items {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+    .links__group {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    .link {
+        background-color: #F8F8F8;
+        padding: 30px 0;
+        cursor: pointer;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        display: inline-flex;
+        column-gap: 2rem;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        transition: .3s;
+    }
+
+    .link:hover {
+        background-color: #F4F4F4;
+    }
+
+    .img-link {
+        background-color: #F0EFEF;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin-left: 20px;
+        padding: 12px;
+    }
+
+    .item-data {
+        font-size: 16px;
+    }
+
+    .item__links__group {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+    .item__card {
+        background-color: #F8F8F8;
+        padding: 30px 0;
+        cursor: pointer;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        display: inline-flex;
+        flex-direction: column;
+        column-gap: 2rem;
+        padding-left: 20px;
+        position: relative;
+        overflow: hidden;
+        transition: .3s;
+        width: 100%;
+    }
     /*=============== SCROLL BAR ===============*/
     
      ::-webkit-scrollbar {
@@ -1275,6 +1367,9 @@
         .projects__container {
             width: 500px;
         }
+        .header__info {
+            padding: 5rem 4.5rem 5rem 4.5rem;
+        }
     }
     /* For large devices */
     
@@ -1398,4 +1493,22 @@
             margin-bottom: 2rem;
             height: 180px;
         }
+
+        .links__group{
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+
+        .link {
+            padding: 2rem 1rem;
+            border-radius: 15px;
+            background-color: #F8F8F8;
+            margin-right: 50px;
+            width: auto;
+        }
+
+
+    .item__card {
+        padding-left: 50px;
+    }
     }
