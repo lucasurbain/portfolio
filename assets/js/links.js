@@ -1,6 +1,6 @@
 /*=============== LINKS PAGE HEADER ===============*/
 // Récupérer tous les liens du header
-const headerLinks = document.querySelectorAll('.link');
+const headerLinks = document.querySelectorAll('.links');
 
 // Masquer toutes les sections d'items, sauf la section "diaporama"
 const itemSections = document.querySelectorAll('.item__links__group');
@@ -28,5 +28,11 @@ headerLinks.forEach(link => {
         if (matchingSection) {
             matchingSection.style.display = 'block';
         }
+
+        // Ajouter la classe "pressed-link" à l'élément de menu de navigation cliqué
+        headerLinks.forEach(link => {
+            link.classList.remove('pressed-link');
+        });
+        link.classList.add('pressed-link');
     });
 });
