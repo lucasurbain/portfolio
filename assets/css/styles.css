@@ -914,6 +914,9 @@
         border-radius: .75rem;
         margin-bottom: 1.25rem;
         box-shadow: 0 2px 8px hsl(var(--second-hue), 48%, 8%, .1);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .projects__subtitle {
