@@ -38,6 +38,10 @@
             </div>
         </div>
         <img src="assets/img/calendar-img.svg" alt="" class="img__calendar">
+
+        <p id="weeks-and-workdays"></p>
+
+        <p id="university-days"></p>
     </section>
 
 
@@ -90,38 +94,49 @@
 
     </style>
 
-    <script>
+     <script>
 
         const countdown = () => {
-            const countDate = new Date("September 1, 2025 00:00:00").getTime()
-            const now = new Date().getTime()
-            const gap = countDate - now
+            const countDate = new Date("September 1, 2025 00:00:00").getTime();
+            const now = new Date().getTime();
+            const gap = countDate - now;
 
-            //Time parameters
-            const second = 1000
-            const minute = 60 * second
-            const hour = 60 * minute
-            const day = 24 * hour
-            const years = 365.25 * day
+            // Time parameters
+            const second = 1000;
+            const minute = 60 * second;
+            const hour = 60 * minute;
+            const day = 24 * hour;
+            const years = 365.25 * day;
 
-            const textYear = Math.floor(gap / years)
-            const textDay = Math.floor((gap % years) / day)
-            const textHour = Math.floor((gap % day) / hour)
-            const textMinute = Math.floor((gap % hour) / minute)
-            const textSecond = Math.floor((gap % minute) / second)
+            const textYear = Math.floor(gap / years);
+            const textDay = Math.floor((gap % years) / day);
+            const textHour = Math.floor((gap % day) / hour);
+            const textMinute = Math.floor((gap % hour) / minute);
+            const textSecond = Math.floor((gap % minute) / second);
 
-            document.querySelector(".year").innerHTML = textYear
-            document.querySelector(".day").innerHTML = textDay
-            document.querySelector(".hour").innerHTML = textHour
-            document.querySelector(".minute").innerHTML = textMinute
-            document.querySelector(".second").innerHTML = textSecond
+            // Calcul du nombre de semaines restantes
+            const totalDays = Math.floor(gap / day);
+            const workdays = Math.floor((totalDays / 7) * 5 * 0.75); // 5 jours de travail par semaine, 75% de temps
+            const universityDays = Math.floor((totalDays / 7) * 5 * 0.25); // 5 jours de cours par semaine, 25% de temps
 
-        }
+            const weeks = Math.floor(workdays / 5); // 5 jours de travail par semaine
+            const universityWeeks = Math.floor(universityDays / 5); // 5 jours d'université par semaine
 
+            // Afficher les données dans la page
+            document.querySelector(".year").innerHTML = textYear;
+            document.querySelector(".day").innerHTML = textDay;
+            document.querySelector(".hour").innerHTML = textHour;
+            document.querySelector(".minute").innerHTML = textMinute;
+            document.querySelector(".second").innerHTML = textSecond;
 
-        countdown()
+            // Afficher le nombre de semaines, de jours de travail et de jours de cours en université restants
+            document.getElementById("weeks-and-workdays").innerHTML = `Semaines restantes : ${weeks}, Jours de travail restants : ${workdays}`;
+            document.getElementById("university-days").innerHTML = `Semaines restantes : ${universityWeeks}, Jours de cours en université : ${universityDays}`;
+        };
 
-        setInterval(countdown, 1000)
+        countdown();
+
+        setInterval(countdown, 1000);
 
     </script>
 </body>
