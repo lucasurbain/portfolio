@@ -162,7 +162,7 @@ window.addEventListener('scroll', scrollTop)
 
 /*=============== GET VERSION ===============*/
 function getVersion() {
-    var version = "2023.23.6";
+    var version = "2024.1.1";
     var copyright = " | Copyright &#169; 2024 Lucas Urbain | All Rigths Reserved.";
     var copyrightDE = " | Copyright &#169; 2024 Lucas Urbain | Alle Rights Vorbehalten.";
     var copyrightFR = " | Copyright &#169; 2024 Lucas Urbain | Tous Droits Réservés.";
